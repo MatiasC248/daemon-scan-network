@@ -1,0 +1,14 @@
+2023-05-22T20:59:53.393Z: MAC Address: 08:40:f3:0e:d8:a1 IP: 192.168.1.64 Device Name: ?
+2023-05-22T20:59:53.392Z: MAC Address: b2:bc:5d:bf:52:fe IP: 192.168.1.35 Device Name: ?
+2023-05-22T21:01:23.468Z: New device connected => MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:01:23.468Z: Device disconnected => MAC Address: b2:bc:5d:bf:52:fe IP: 192.168.1.35 Device Name: ?
+2023-05-22T21:01:57.525Z: Devices already connected to this network
+2023-05-22T21:01:57.525Z: MAC Address: 08:40:f3:0e:d8:a1 IP: 192.168.1.64 Device Name: ?
+2023-05-22T21:01:57.525Z: MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:02:37.553Z: Device disconnected => MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:03:07.597Z: New device connected => MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:04:16.703Z: Devices already connected to this network
+2023-05-22T21:04:16.703Z: MAC Address: 08:40:f3:0e:d8:a1 IP: 192.168.1.64 Device Name: ?
+2023-05-22T21:04:16.703Z: MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:05:26.824Z: Device disconnected => MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
+2023-05-22T21:05:46.841Z: New device connected => MAC Address: a8:9c:ed:6c:b8:ab IP: 192.168.1.59 Device Name: ?
