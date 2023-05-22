@@ -1,0 +1,16 @@
+{
+  "name": "daemon-scan-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scannet.js",
+  "dependencies": {
+    "local-devices": "^4.0.0"
+  },
+  "devDependencies": {},
+  "type": "module",
+  "scripts": {
+    "build": "node scannet.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
