@@ -8,28 +8,35 @@ import { promises as fs } from 'fs'
 var devicesList
 var devicesMap = new Map();
 // Find all local network devices.
-find().then(devices => {
-    devicesList = devices
-    devices.forEach(device => {
-        devicesMap.set(device.mac, { name: device.name, ip: device.ip, mac: device.mac, expired: true }) // set expired to true before checking
-    });
-    writeInLog("Devices already connected to this network")
-    devicesMap.forEach((value) => {
-        writeInLog("MAC Address: " + value.mac + " IP: " + value.ip + " Device Name: " + value.name)
-    });
-})
 
-while(true) {
-    await sleep(4000)
+
+async function runDaemon(){
     find().then(devices => {
-        determineChanges(devicesMap, devices)
-        var newDevicesMap = new Map();
+        devicesList = devices
         devices.forEach(device => {
-            newDevicesMap.set(device.mac, { name: device.name, ip: device.ip, mac: device.mac, expired: true })
+            devicesMap.set(device.mac, { name: device.name, ip: device.ip, mac: device.mac, expired: true }) // set expired to true before checking
         });
-        devicesMap = newDevicesMap
+        writeInLog("Devices already connected to this network")
+        devicesMap.forEach((value) => {
+            writeInLog("MAC Address: " + value.mac + " IP: " + value.ip + " Device Name: " + value.name)
+        });
     })
+
+
+    while(true) {
+        await sleep(4000)
+        find().then(devices => {
+            determineChanges(devicesMap, devices)
+            var newDevicesMap = new Map();
+            devices.forEach(device => {
+                newDevicesMap.set(device.mac, { name: device.name, ip: device.ip, mac: device.mac, expired: true })
+            });
+            devicesMap = newDevicesMap
+        })
+    }
 }
+
+runDaemon();
 
 function sleep(ms) {
   return new Promise((resolve) => {

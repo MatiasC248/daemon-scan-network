@@ -1,0 +1,10 @@
+[Unit]
+Description=Daemon service to monitor known devices via arp protocol / TP1 Software Libre / Marcos Aguilera - Matias Castorina
+After=network-up.target
+
+[Service]
+ExecStart=/usr/bin/node /home/marcos/Documentos/daemon-scan-network/scannet.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
